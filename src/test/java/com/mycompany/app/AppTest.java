@@ -40,21 +40,21 @@ public class AppTest
     }
     public void testFound() {
      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(13, 24, 37, 40));
-      assertTrue(new App().search(array, 4, 0));
+      assertTrue(new App().search(array, "4", "0"));
     }
 
     public void testNotFound() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5, 0));
+      assertFalse(new App().search(array, "5", "0"));
     }
 
     public void testEmptyArray() {
       ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1, 12));
+      assertFalse(new App().search(array, "1", "12"));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1, 43));
+      assertFalse(new App().search(null, "1", "43"));
     }
 
 }
