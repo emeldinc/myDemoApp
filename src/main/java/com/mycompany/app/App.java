@@ -20,7 +20,7 @@ public class App
     public static boolean search(ArrayList<Integer> array, String inp1, String inp2) {
       System.out.println("inside search");
 
-      String merge = inp1 + inp2;
+      String merge = inp1 + inp2 + "";
       int mergeAsInt = Integer.parseInt(merge);
  
       if (array == null) return false;
@@ -52,8 +52,8 @@ public class App
           System.out.println(inputList);
 
 
-          String input2 = req.queryParams("input2").replaceAll("\\s","");
-	  String input3 = req.queryParams("input3").replaceAll("\\s","");
+          String input2 = req.queryParams("input2").replaceAll("\\s","").trim();
+	  String input3 = req.queryParams("input3").replaceAll("\\s","").trim();
 
           boolean result = App.search(inputList, input2, input3);
 
