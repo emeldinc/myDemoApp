@@ -74,6 +74,19 @@ public class App
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
+    static boolean newMethodInsert(ArrayList<String> bigList, ArrayList<String> smallList, String number){
+	if (bigList == null) return false;
+	if (smallList == null) return false;
+	int num = Integer.parseInt(number);
+	smallList.add(number);
+	ArrayList<Integer> newlist = new ArrayList<>();
+	for(int i = 0; i < bigList.size(); i++){
+		newList.index(i) = Integer.parseInt(bigList.index(i)); 
+	if(search(newList, num))
+		bigList.add(number);
+	
+    }
+
 }
 
 
